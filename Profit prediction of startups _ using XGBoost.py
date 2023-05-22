@@ -91,10 +91,10 @@ plt.show()
 print('____________________Visualizing Train set results____________________')
 
 # Visualising Difference between Train and Regressor results (R&D Spend)
-X_test_sorted = X_test[X_test[:,3].argsort()]
-y_test_sorted = y_test[X_test[:,3].argsort()]
-plt.scatter(sc_X.inverse_transform(X_test_sorted)[:,3].reshape(-1,1), y_test_sorted.reshape(-1,1), color = 'green', s=110, label='R&D Spend , y')
-plt.plot(sc_X.inverse_transform(X_test_sorted)[:,3].reshape(-1,1), sc_y.inverse_transform(regressor.predict(X_test_sorted).reshape(-1,1)), color = 'red', marker='*', label='Regressor')
+X_train_sorted = X_train[X_train[:,3].argsort()]
+y_train_sorted = y_train[X_train[:,3].argsort()]
+plt.scatter(sc_X.inverse_transform(X_train_sorted)[:,3].reshape(-1,1), sc_y.inverse_transform(y_train_sorted).reshape(-1,1), color = 'green', s=110, label='R&D Spend , y')
+plt.plot(sc_X.inverse_transform(X_train_sorted)[:,3].reshape(-1,1), sc_y.inverse_transform(regressor.predict(X_train_sorted).reshape(-1,1)), color = 'red', marker='*', label='Regressor')
 plt.scatter(sc_X.inverse_transform(single_prediction)[0][3], y_single_prediction, color='blue', s=200, marker='*', label='Single Prediction') # this has been added to show the single prediction result
 plt.title('Difference between Train and Regressor results (R&D Spend)')
 plt.xlabel('R&D Spend')
@@ -103,10 +103,10 @@ plt.legend()
 plt.show()
 
 # Visualising Difference between Train and Regressor results (Administration)
-X_test_sorted = X_test[X_test[:,4].argsort()]
-y_test_sorted = y_test[X_test[:,4].argsort()]
-plt.scatter(sc_X.inverse_transform(X_test_sorted)[:,4].reshape(-1,1), y_test_sorted.reshape(-1,1), color = 'green', s=110, label='Administration , y')
-plt.plot(sc_X.inverse_transform(X_test_sorted)[:,4].reshape(-1,1), sc_y.inverse_transform(regressor.predict(X_test_sorted).reshape(-1,1)), color = 'red', marker='*', label='Regressor')
+X_train_sorted = X_train[X_train[:,4].argsort()]
+y_train_sorted = y_train[X_train[:,4].argsort()]
+plt.scatter(sc_X.inverse_transform(X_train_sorted)[:,4].reshape(-1,1), sc_y.inverse_transform(y_train_sorted).reshape(-1,1), color = 'green', s=110, label='Administration , y')
+plt.plot(sc_X.inverse_transform(X_train_sorted)[:,4].reshape(-1,1), sc_y.inverse_transform(regressor.predict(X_train_sorted).reshape(-1,1)), color = 'red', marker='*', label='Regressor')
 plt.scatter(sc_X.inverse_transform(single_prediction)[0][4], y_single_prediction, color='blue', s=200, marker='*', label='Single Prediction') # this has been added to show the single prediction result
 plt.title('Difference between Train and Regressor results (Administration)')
 plt.xlabel('Administration')
@@ -115,10 +115,10 @@ plt.legend()
 plt.show()
 
 # Visualising Difference between Train and Regressor results (Marketing Spend)
-X_test_sorted = X_test[X_test[:,5].argsort()]
-y_test_sorted = y_test[X_test[:,5].argsort()]
-plt.scatter(sc_X.inverse_transform(X_test_sorted)[:,5].reshape(-1,1), y_test_sorted.reshape(-1,1), color = 'green', s=110, label='Marketing Spend , y')
-plt.plot(sc_X.inverse_transform(X_test_sorted)[:,5].reshape(-1,1), sc_y.inverse_transform(regressor.predict(X_test_sorted).reshape(-1,1)), color = 'red', marker='*', label='Regressor')
+X_train_sorted = X_train[X_train[:,5].argsort()]
+y_train_sorted = y_train[X_train[:,5].argsort()]
+plt.scatter(sc_X.inverse_transform(X_train_sorted)[:,5].reshape(-1,1), sc_y.inverse_transform(y_train_sorted).reshape(-1,1), color = 'green', s=110, label='Marketing Spend , y')
+plt.plot(sc_X.inverse_transform(X_train_sorted)[:,5].reshape(-1,1), sc_y.inverse_transform(regressor.predict(X_train_sorted).reshape(-1,1)), color = 'red', marker='*', label='Regressor')
 plt.scatter(sc_X.inverse_transform(single_prediction)[0][5], y_single_prediction, color='blue', s=200, marker='*', label='Single Prediction') # this has been added to show the single prediction result
 plt.title('Difference between Train and Regressor results (Marketing Spend)')
 plt.xlabel('Marketing Spend')
@@ -129,10 +129,10 @@ plt.show()
 print('____________________Visualizing Test set results____________________')
 
 # Visualising Difference between Test and Regressor results (R&D Spend)
-X_train_sorted = X_train[X_train[:,3].argsort()]
-y_train_sorted = y_train[X_train[:,3].argsort()]
-plt.scatter(sc_X.inverse_transform(X_train_sorted)[:,3].reshape(-1,1), sc_y.inverse_transform(y_train_sorted).reshape(-1,1), color = 'green', s=110, label='R&D Spend , y')
-plt.plot(sc_X.inverse_transform(X_train_sorted)[:,3].reshape(-1,1), sc_y.inverse_transform(regressor.predict(X_train_sorted).reshape(-1,1)), color = 'red', marker='*', label='Regressor')
+X_test_sorted = X_test[X_test[:,3].argsort()]
+y_test_sorted = y_test[X_test[:,3].argsort()]
+plt.scatter(sc_X.inverse_transform(X_test_sorted)[:,3].reshape(-1,1), y_test_sorted.reshape(-1,1), color = 'green', s=110, label='R&D Spend , y')
+plt.plot(sc_X.inverse_transform(X_test_sorted)[:,3].reshape(-1,1), sc_y.inverse_transform(regressor.predict(X_test_sorted).reshape(-1,1)), color = 'red', marker='*', label='Regressor')
 plt.scatter(sc_X.inverse_transform(single_prediction)[0][3], y_single_prediction, color='blue', s=200, marker='*', label='Single Prediction') # this has been added to show the single prediction result
 plt.title('Difference between Test and Regressor results (R&D Spend)')
 plt.xlabel('R&D Spend')
@@ -141,10 +141,10 @@ plt.legend()
 plt.show()
 
 # Visualising Difference between Test and Regressor results (Administration)
-X_train_sorted = X_train[X_train[:,4].argsort()]
-y_train_sorted = y_train[X_train[:,4].argsort()]
-plt.scatter(sc_X.inverse_transform(X_train_sorted)[:,4].reshape(-1,1), sc_y.inverse_transform(y_train_sorted).reshape(-1,1), color = 'green', s=110, label='Administration , y')
-plt.plot(sc_X.inverse_transform(X_train_sorted)[:,4].reshape(-1,1), sc_y.inverse_transform(regressor.predict(X_train_sorted).reshape(-1,1)), color = 'red', marker='*', label='Regressor')
+X_test_sorted = X_test[X_test[:,4].argsort()]
+y_test_sorted = y_test[X_test[:,4].argsort()]
+plt.scatter(sc_X.inverse_transform(X_test_sorted)[:,4].reshape(-1,1), y_test_sorted.reshape(-1,1), color = 'green', s=110, label='Administration , y')
+plt.plot(sc_X.inverse_transform(X_test_sorted)[:,4].reshape(-1,1), sc_y.inverse_transform(regressor.predict(X_test_sorted).reshape(-1,1)), color = 'red', marker='*', label='Regressor')
 plt.scatter(sc_X.inverse_transform(single_prediction)[0][4], y_single_prediction, color='blue', s=200, marker='*', label='Single Prediction') # this has been added to show the single prediction result
 plt.title('Difference between Test and Regressor results (Administration)')
 plt.xlabel('Administration')
@@ -153,10 +153,10 @@ plt.legend()
 plt.show()
 
 # Visualising Difference between Test and Regressor results (Marketing Spend)
-X_train_sorted = X_train[X_train[:,5].argsort()]
-y_train_sorted = y_train[X_train[:,5].argsort()]
-plt.scatter(sc_X.inverse_transform(X_train_sorted)[:,5].reshape(-1,1), sc_y.inverse_transform(y_train_sorted).reshape(-1,1), color = 'green', s=110, label='Marketing Spend , y')
-plt.plot(sc_X.inverse_transform(X_train_sorted)[:,5].reshape(-1,1), sc_y.inverse_transform(regressor.predict(X_train_sorted).reshape(-1,1)), color = 'red', marker='*', label='Regressor')
+X_test_sorted = X_test[X_test[:,5].argsort()]
+y_test_sorted = y_test[X_test[:,5].argsort()]
+plt.scatter(sc_X.inverse_transform(X_test_sorted)[:,5].reshape(-1,1), y_test_sorted.reshape(-1,1), color = 'green', s=110, label='Marketing Spend , y')
+plt.plot(sc_X.inverse_transform(X_test_sorted)[:,5].reshape(-1,1), sc_y.inverse_transform(regressor.predict(X_test_sorted).reshape(-1,1)), color = 'red', marker='*', label='Regressor')
 plt.scatter(sc_X.inverse_transform(single_prediction)[0][5], y_single_prediction, color='blue', s=200, marker='*', label='Single Prediction') # this has been added to show the single prediction result
 plt.title('Difference between Test and Regressor results (Marketing Spend)')
 plt.xlabel('Marketing Spend')
