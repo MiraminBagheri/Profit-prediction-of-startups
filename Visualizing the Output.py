@@ -48,7 +48,7 @@ plt.show()
 # Print Performances and Summary 
 print('\n Performances:\n',dataset)
 summary = {'':['Minimum','Maximum','Average'],
-             'Estimated_Position_Salary':[y[:,3].min(), y[:,3].max(), y[:,3].mean()],
+             'Estimated_Profit':[y[:,3].min(), y[:,3].max(), y[:,3].mean()],
              'Module_Name':[X[list(y[:,3]).index(y[:,3].min())], X[list(y[:,3]).index(y[:,3].max())], '']}
 summary = pd.DataFrame(summary, index=None)
 print('\n Summary:\n',summary)
